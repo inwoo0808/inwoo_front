@@ -1,7 +1,7 @@
 <template>
-  <div class="container py-3">
-    <div class="row">
-      <div class="col-md-6 text-center py-3">
+  <div class="container">
+    <div>
+      <div class="text-center py-3 col-md-6" style="margin-left: 23%">
         <h3>My Exercise Record</h3>
         <div class="row">
           <div class="col-md-6" style="margin-left: 10%">
@@ -10,16 +10,11 @@
         </div>
         <UserSignView />
       </div>
-      <div class="col-md-6 text-center py-3">
-        <h3>My Record List</h3>
-        <UserListView />
-      </div>
     </div>
-    <!-- <div class="row">
-      <div class="col-md-6">
-        <MapView />
-      </div>
-    </div> -->
+    <div class="text-center py-3">
+      <h3 class="mb-3">My Record List</h3>
+      <UserListView />
+    </div>
   </div>
 </template>
 

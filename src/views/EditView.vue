@@ -50,7 +50,7 @@
       <button
         type="submit"
         class="btn btn-outline-dark mt-3 mb-3"
-        style="margin-left: 40%"
+        style="margin-left: 45%"
       >
         저장
       </button>

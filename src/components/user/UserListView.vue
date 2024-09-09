@@ -1,37 +1,41 @@
 <template>
-  <div
-    v-for="(item, i) in $store.state.recordData"
-    :key="i"
-    class="d-flex gap-2 border rounded p-3 mb-3 mt-3"
-  >
-    <div class="avata">
-      <img :src="item.image" alt="" />
-    </div>
-    <div>
-      <h5 class="mb-0">{{ item.title }}</h5>
-      <p class="mb-0">{{ item.date }}</p>
-      <p class="mb-0">{{ item.content }}</p>
-    </div>
-    <div class="action-buttons">
-      <router-link
-        :to="{ name: 'detail', params: { id: item.id } }"
-        class="btn btn-outline-dark mt-3"
-        style="height: 50%"
-        >상세보기</router-link
-      >
-      <router-link
-        :to="{ name: 'edit', params: { id: item.id } }"
-        class="btn btn-outline-dark mt-3"
-        style="height: 50%"
-        >수정</router-link
-      >
-      <button
-        @click="deleteItem(item)"
-        class="btn btn-outline-dark mt-3"
-        style="height: 50%"
-      >
-        삭제
-      </button>
+  <div class="container">
+    <div class="row">
+      <div v-for="(item, i) in $store.state.recordData" :key="i" class="col">
+        <div class="card-group d-flex justify-content-center">
+          <div class="card col">
+            <img :src="item.image" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text">{{ item.content }}</p>
+              <div class="action-buttons" style="margin-left: 17%">
+                <router-link
+                  :to="{ name: 'detail', params: { id: item.id } }"
+                  class="btn btn-link mt-3"
+                  style="height: 50%; color: black"
+                  >상세보기</router-link
+                >
+                <router-link
+                  :to="{ name: 'edit', params: { id: item.id } }"
+                  class="btn btn-link mt-3"
+                  style="height: 50%; color: black"
+                  >수정</router-link
+                >
+                <button
+                  @click="deleteItem(item)"
+                  class="btn btn-link mt-3"
+                  style="height: 50%; color: black"
+                >
+                  삭제
+                </button>
+              </div>
+              <p class="card-text">
+                <small class="text-muted">{{ item.date }}</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
