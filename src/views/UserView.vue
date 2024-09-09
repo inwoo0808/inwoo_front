@@ -3,6 +3,11 @@
     <div class="row">
       <div class="col-md-6 text-center py-3">
         <h3>My Exercise Record</h3>
+        <div class="row">
+          <div class="col-md-6" style="margin-left: 10%">
+            <MapView />
+          </div>
+        </div>
         <UserSignView />
       </div>
       <div class="col-md-6 text-center py-3">
@@ -10,11 +15,11 @@
         <UserListView />
       </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-md-6">
         <MapView />
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
