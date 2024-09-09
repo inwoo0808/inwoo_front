@@ -11,6 +11,14 @@
     <div class="mb-3">
       <input type="date" class="form-control" v-model="recordData.date" />
     </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Please enter the gym address"
+        v-model="recordData.addr"
+      />
+    </div>
     <div class="input-group mb-3">
       <span class="input-group-text">exercise content</span>
       <textarea
@@ -43,6 +51,7 @@ const store = useStore();
 const recordData = ref({
   title: null,
   date: null,
+  addr: null,
   content: "",
   image: null,
 });
@@ -50,6 +59,7 @@ const recordData = ref({
 const clearform = () => {
   recordData.value.title = null;
   recordData.value.date = null;
+  recordData.value.addr = null;
   recordData.value.content = null;
   recordData.value.image = null;
 };
@@ -58,6 +68,7 @@ const addRecord = () => {
   let uData = {
     title: recordData.value.title,
     date: recordData.value.date,
+    addr: recordData.value.addr,
     content: recordData.value.content,
     image: recordData.value.image,
   };

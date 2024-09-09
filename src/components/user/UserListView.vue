@@ -6,7 +6,7 @@
           <div class="card col">
             <img :src="item.image" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">{{ item.title }}</h5>
+              <h5 class="card-title">NO.{{ item.id }} {{ item.title }}</h5>
               <p class="card-text">{{ item.content }}</p>
               <div class="action-buttons" style="margin-left: 17%">
                 <router-link
@@ -73,13 +73,6 @@ const deleteItem = (item) => {
 </script>
 
 <style lang="scss" scoped>
-.avata {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
 .action-buttons {
   margin-left: auto;
   display: flex;
